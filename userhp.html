@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="userhp.css">
+        
+        <title>User Home Page</title>
+        
+    </head>
+    <body>
+        
+        <div class="dropdown-item">
+            <div class="imgBox" onclick="myFunction()">
+                <img src="lena.png" alt="Profile">
+            </div>
+            <div class="dropdown-content">
+                <div class="content">
+                    <div class="name">Tissa Shakira</div>
+                    <div class="occupation"> Student</div>
+                </div>
+                <ul class="links">
+                   <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> My Profile</a></li>
+                    <li><a href="useracc.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</a></li>
+                    <div class="divider"></div>
+                    <li><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i> Settings</a></li>
+                    <li><a href="#"><i class="fa fa-question" aria-hidden="true"></i> Help</a></li>
+                    <div class="divider"></div>
+                    <li><a href="index.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <script>
+		function myFunction() {
+			var dropdownContent = document.querySelector('.dropdown-content');
+			dropdownContent.classList.toggle('dropdown-toggle');
+		}
+	</script>
+        
+        
+        <div class="container">
+            <h1>HI! WELCOME BACK</h1>
+            <div class="row">
+                <div class="service">
+                    <i class="fas fa-laptop-code"></i>
+                    <h2>My Course</h2>
+                    <p>Start new course or check on your course here!</p>
+                </div>
+        </div>
+                <div class="service">
+                    <i class="fas fa-chart-line"></i>
+                    <h2>Grades</h2>
+                    <p>Check on your grades here.</p>
+                </div>
+                
+                <div class="service">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h2>Course Videos</h2>
+                    <p>Watch every courses video here.</p>
+                </div>
+                
+                <div class="service">
+                    <i class="fas fa-chart-pie"></i>
+                    <h2>QUIZ</h2>
+                    <p>Start your quiz in every subject here!</p>
+                </div>
+                
+            </div>
+    </body>
+</html>

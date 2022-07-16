@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> Upload Images</title>
+        <style type="text/css">
+            body {background-color: #ff7200;}
+        </style>
+    </head>
+    <body>
+        <div id="box">
+        <h3>Upload your file here!</h3>
+        <input type="file" name="upimg" id="upimg" onchange="loadImage()"><br><br>
+        <input type="submit" onclick="upload()"> 
+        </div>
+        
+        
+        <script>
+                function loadImage() {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        }
+        
+        function upload() {
+            let photo = document.getElementById("upimg").files[0]; //file input
+            let req = new XMLHttpRequest();
+            let formData = new FormData();
+            formData.append("photo", photo);                                
+            req.open("POST", "file.php", true);
+            req.send(formData);
+            req.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  alert(this.responseText);
+                }
+            }
+        }
+            </script>
+            <a href="email.php">Back to Email</a>
+            <a href="matrik.html">Previous</a>
+    </body>
+</html>
